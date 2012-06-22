@@ -30,40 +30,51 @@ Here's an example *Auth Hash* available in `request.env['omniauth.auth']`:
 
 ```ruby
 {
-  :provider => 'facebook',
-  :uid => '1234567',
+  :provider => 'taskrabbit',
+  :uid => 283559,
   :info => {
-    :nickname => 'jbloggs',
-    :email => 'joe@bloggs.com',
-    :name => 'Joe Bloggs',
-    :first_name => 'Joe',
-    :last_name => 'Bloggs',
-    :image => 'http://graph.facebook.com/1234567/picture?type=square',
-    :urls => { :Facebook => 'http://www.facebook.com/jbloggs' },
-    :location => 'Palo Alto, California',
-    :verified => true
+    :email => "sponge.bob@example.com"
+    :first_name => "Bob",
+    :last_name => "Sponge",
+    :full_name => "Bob Sponge",
+    :zip_code => "21314",
   },
   :credentials => {
-    :token => 'ABCDEF...', # OAuth 2.0 access_token, which you may wish to store
-    :expires_at => 1321747205, # when the access token expires (it always will)
-    :expires => true # this will always be true
+    :token => 'oXOIDNEOInwiewniwnaiNSiocnione', # OAuth 2.0 access_token, which you may wish to store
+    :expires => false
   },
   :extra => {
     :raw_info => {
-      :id => '1234567',
-      :name => 'Joe Bloggs',
-      :first_name => 'Joe',
-      :last_name => 'Bloggs',
-      :link => 'http://www.facebook.com/jbloggs',
-      :username => 'jbloggs',
-      :location => { :id => '123456789', :name => 'Palo Alto, California' },
-      :gender => 'male',
-      :email => 'joe@bloggs.com',
-      :timezone => -8,
-      :locale => 'en_US',
-      :verified => true,
-      :updated_time => '2011-11-11T06:21:03+0000'
-    }
+      :id => 283559,
+      :zip_code => "21314",
+      :first_name => "Bob",
+      :last_name => "Sponge",
+      :full_name => "Bob Sponge",
+      :short_name => "Bob",
+      :display_name => "Bob S.",
+      :email => "sponge.bob@example.com",
+      :links => {
+        :avatar_url => "https://www.taskrabbit.com/images/default_avatars/poster_thumb.png",
+        :get => "/api/v1/users/283559"
+      },
+      :tasks => {
+        :links => {
+          :get => "/api/v1/users/283559/tasks",
+          :last => "/api/v1/users/283559/tasks?page=1",
+          :first => "/api/v1/users/283559/tasks?page=1"
+        }
+      },
+      :locations => {
+        :links => {
+          :get => "/api/v1/users/283559/locations"
+        }
+      },
+      :counts => {
+        :posted_tasks => 5,
+        :ongoing_tasks => 2,
+        :active_tasks => 1
+      }
+    }   
   }
 }
 ```
