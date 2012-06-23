@@ -38,6 +38,10 @@ Here's an example *Auth Hash* available in `request.env['omniauth.auth']`:
     :last_name => "Sponge",
     :full_name => "Bob Sponge",
     :zip_code => "21314",
+    :city: {
+      :id: 1,
+      :name: "Boston"
+    },
   },
   :credentials => {
     :token => 'oXOIDNEOInwiewniwnaiNSiocnione', # OAuth 2.0 access_token, which you may wish to store
@@ -53,6 +57,10 @@ Here's an example *Auth Hash* available in `request.env['omniauth.auth']`:
       :short_name => "Bob",
       :display_name => "Bob S.",
       :email => "sponge.bob@example.com",
+      :city: {
+        :id: 1,
+        :name: "Boston"
+      },
       :links => {
         :avatar_url => "https://www.taskrabbit.com/images/default_avatars/poster_thumb.png",
         :get => "/api/v1/users/283559"
