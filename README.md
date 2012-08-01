@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/jrichardlai/omniauth-taskrabbit.png?branch=master)](http://travis-ci.org/jrichardlai/omniauth-taskrabbit)
+
 # OmniAuth TaskRabbit
 
 TaskRabbit OAuth2 Strategy for OmniAuth 1.0.
