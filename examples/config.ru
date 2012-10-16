@@ -3,6 +3,7 @@
 # Run with "bundle exec rackup"
 ENV['TR_API_KEY']    = 'ior8jfh723hfD8fj9eSi383Niojreiu3U832hf90'
 ENV['TR_API_SECRET'] = 'pfjf7dfw392h2D2iofkjpxqdreLKue523tdnbdff'
+ENV['RACK_COOKIE_SECRET'] = 'supersecretcookiewhichisverylong'
 
 require 'rubygems'
 require 'bundler'
