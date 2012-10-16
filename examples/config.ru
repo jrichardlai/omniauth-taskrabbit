@@ -35,6 +35,8 @@ class App < Sinatra::Base
   end
 end
 
+use Rack::Session::Cookie, :secret => ENV['RACK_COOKIE_SECRET']
+
 use OmniAuth::Builder do
   provider :taskrabbit, ENV['TR_API_KEY'], ENV['TR_API_SECRET']
 end
